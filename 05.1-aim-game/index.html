@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Aim Game</title>
+</head>
+<body>
+  
+  <div class="aim-game">
+
+    <div class="screen screen-1 screen__state-active" data-screen="start">
+      <h1 class="text-color text-size">Aim Game</h1>
+      <button class="btn" id="start-game-btn">start</button>
+    </div>
+
+    <div class="screen screen-2" data-screen="time">
+      <h2 class="text-color text-size">Select Time</h2>
+      <div class="time-list">
+        <button class="btn time-btn" data-time="10">10 sec</button>
+        <button class="btn time-btn" data-time="20">20 sec</button>
+        <button class="btn time-btn" data-time="30">30 sec</button>
+        <button class="btn time-btn" data-time="40">40 sec</button> 
+      </div>
+    </div>
+
+    <div class="screen screen-3" data-screen="game">
+      <h2 class="text-color text-size">Do your best!</h2>
+      <h3 class="text-color">Time: <span id="current-time" class="time"></span> | Score: <span id="board-score-count"></span></h3>
+      <div id="board" class="game-board">
+        <div class="game-circle"></div>
+      </div>
+    </div>
+
+    <div class="screen screen-4" data-screen="replay">
+      <h2 class="text-color text-size">Your score: <span id="result-score-count"></span> hits!</h2>
+      <h3 class="text-color">Maybe replay?</h3>
+      <div class="replay-btns">
+        <button class="btn" data-replay="replay">Yes, of course!</button>
+        <button class="btn" data-replay="not-replay">No, thanks.</button>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>

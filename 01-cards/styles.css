@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  background: #251f0d;
+}
+
+.preloader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #251f0d;
+  text-align: center;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity .3s ease-in;
+}
+
+.preloader.deactive {
+  z-index: -999;
+}
+
+.preloader.opacity {
+  opacity: 0;
+}
+
+.preloader h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #e1a958;
+  font-weight: 700;
+  font-size: 6vw;
+  background-image: linear-gradient(45deg, #f8e498, #523d1e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+
+.slide {
+  height: 90vh;
+  border-radius: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  color: #fff;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+}
+
+.slide h3 {
+  position: absolute;
+  font-size: 24px;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: opacity .3s ease-in;
+}
+
+.slide.active {
+  flex: 10;
+}
+
+.slide.active h3 {
+  opacity: 1;
+}

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  height: 100vh;
+  padding-top: 5rem;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  background: linear-gradient(48deg, #2b5a4e, #00ffbe, #ffab00, #ecac29);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 60s ease infinite;
+  -moz-animation: AnimationName 60s ease infinite;
+  -o-animation: AnimationName 60s ease infinite;
+  animation: AnimationName 60s ease infinite;
+}
+
+.row {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.col-header {
+  width: 150px;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  color: #fff;
+  border: 1px solid yellow;
+}
+
+.item {
+  width: 150px;
+  height: 66px;
+  border: 1px solid #eee;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  background: #f7f6f7;
+  padding: 0.8rem 1rem;
+  color: #828282;
+  text-align: center;
+  cursor: grab;
+  transition: color .2s ease;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+  width: 150px;
+  height: 66px;
+}
+
+.start {
+  background: linear-gradient(48deg, #2b5a4e, #ecac29);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  -o-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+.progress {
+  background: linear-gradient(45deg, #0e5b9b, #68e0cf);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  -o-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+.done {
+  background: linear-gradient(45deg, #0f5f2c, #8fd3f4);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  -o-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:100% 0%}
+  50%{background-position:0% 100%}
+  100%{background-position:100% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:100% 0%}
+  50%{background-position:0% 100%}
+  100%{background-position:100% 0%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:100% 0%}
+  50%{background-position:0% 100%}
+  100%{background-position:100% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:100% 0%}
+  50%{background-position:0% 100%}
+  100%{background-position:100% 0%}
+}
+
+/* Custom Styles */
+
+.placeholder.hovered {
+  border-top: 2px solid #1ea7eb;
+}
+
+.hold {
+  border: 3px solid #1ea7eb;
+}
+
+.hide {
+  display: none;
+}
